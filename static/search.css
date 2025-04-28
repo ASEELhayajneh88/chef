@@ -1,0 +1,136 @@
+/* تنسيق عام للصفحة */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #e5e6e5 !important; /* خلفية فاتحة جدًا */
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* يبقي المحتوى العلوي في أعلى الصفحة */
+}
+
+/* ترويسة الصفحة */
+h1 {
+    text-align: center;
+    color: #050505;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* حقل البحث */
+form input[type="text"] {
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+    padding: 14px 20px;
+    border: 2px solid #0c0c0c;
+    border-radius: 25px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(230, 85, 80, 0.3);
+}
+
+/* تأثير عند التركيز على حقل البحث */
+form input[type="text"]:focus {
+    border-color: #e65550;
+    box-shadow: 0 0 12px rgba(230, 85, 80, 0.7);
+}
+
+/* زر البحث */
+form button {
+    display: block !important;
+    margin: 30px auto !important;
+    background-color: #121111 !important;
+    border: none !important;
+    padding: 12px 40px !important;
+    border-radius: 30px !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    color: white !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease, transform 0.3s ease !important;
+}
+
+form button:hover {
+    background-color: #e65550 !important;
+    transform: translateY(-5px) !important;
+}
+
+/* عنوان نتائج البحث */
+h2 {
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+/* كروت النتائج */
+.card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* صورة الوصفة */
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* محتوى الكارت */
+.card-body {
+    padding: 25px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #101010;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* رسالة عدم العثور */
+.alert {
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 30px;
+    border: 1px solid #f5c6cb;
+}
+
+/* الجزء السفلي من الصفحة */
+footer {
+    background-color: #3a3838; /* اللون الرمادي */
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    margin-top: auto; /* يتم دفع المحتوى للأعلى */
+}

@@ -1,0 +1,62 @@
+/* ستايل عام للصفحة */
+body {
+    background: linear-gradient(to right, #f8f9fa, #d3d3d3);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cairo', sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+/* كارت تسجيل الدخول */
+.login-card {
+    background: white;
+    padding: 2.5rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* عنوان تسجيل الدخول */
+h1 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+/* الحقول */
+form input[type="text"],
+form input[type="password"] {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+/* زر الدخول */
+form button {
+    background-color: #007bff;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 12px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* رسائل الفلاش */
+.alert {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1rem;
+}

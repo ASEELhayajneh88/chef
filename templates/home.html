@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- قسم الترحيب بالصفحة -->
+    <section class="hero-section d-flex align-items-center justify-content-center text-center text-white">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1 class="display-4">مرحبًا بك في موقع الوصفات!</h1>
+            <p class="lead">اكتشف وصفات لذيذة وسهلة التحضير من جميع أنحاء العالم.</p>
+            <a href="/recipes" class="btn btn-light btn-lg mt-3">استعرض الوصفات</a>
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    
+
+    <!-- قسم نبذة عنا -->
+    <section class="about-us py-5 ">
+        <div class="container">
+            <h2 class="text-center mb-5">نبذة عنا</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="/static/uploads/i.jpg" class="img-fluid rounded" alt="نبذة عنا">
+                </div>
+                <div class="col-md-6">
+                    <p class="lead">
+                        نحن في موقع الوصفات نؤمن أن الطعام هو لغة العالم المشتركة. نعمل على تقديم أفضل وأشهى الوصفات 
+                        التي تناسب جميع الأذواق والمستويات. هدفنا هو جعل تجربة الطهي ممتعة وسهلة لكل محب للطعام.
+                    </p>
+                    <p>
+                        فريقنا يعمل بكل شغف لاختيار وتجربة وصفات متنوعة من مختلف أنحاء العالم لتقديمها لكم بطريقة مبسطة وواضحة.
+                        استمتعوا بتجربة الطهي معنا وشاركونا وصفاتكم المفضلة!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم معرض الصور -->
+    <section class="gallery py-5 ">
+        <div class="container">
+            <h2 class="text-center mb-5">معرض الصور</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/static/uploads/OIP1.jpg" class="img-fluid rounded" alt="وصفة 1">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/static/uploads/ا-1.jpg" class="img-fluid rounded" alt="وصفة 2">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gallery-item">
+                        <img src="/static/uploads/R.jpg" class="img-fluid rounded" alt="وصفة 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

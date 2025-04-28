@@ -1,0 +1,124 @@
+/* إزالة الهامش والحشو من الجسم */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #4d4646; /* خلفية رمادية موحدة */
+    color: white; /* نص أبيض ليسهل القراءة */
+}
+
+/* تخصيص الـ Navbar */
+.navbar {
+    border-bottom: 2px solid #2c2929;
+    background-color: #3a3838; /* إضافة لون الخلفية للنافبار */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #e8e4e4 !important;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #312f2f !important;
+}
+
+/* تخصيص الهيرو */
+.hero-section {
+    position: relative;
+    background-image: url('/static/uploads/bb.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1, 
+.hero-section p {
+    color: white;
+}
+
+/* تخصيص الكروت */
+.feature-card {
+    padding: 20px;
+    border-radius: 10px;
+    background: #4a4a4a; /* لون أغمق قليلاً للكروت */
+    transition: all 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* تخصيص قسم نبذة عنا */
+.about-us {
+    background-color: #3a3838; /* نفس لون الجسم */
+    padding: 60px 0;
+}
+
+.about-us img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(251, 248, 248, 0.5);
+}
+
+.about-us .lead {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 1rem;
+    color: #ccc; /* نص رمادي فاتح لراحة القراءة */
+}
+.about-us h2{
+    color: #ece9e8;
+}
+/* تخصيص معرض الصور */
+.gallery {
+    background-color: #3a3838; /* خلفية موحدة للمعرض */
+}
+.gallery h2{
+    color: #f0e8e8;
+}
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* تخصيص الأزرار */
+.btn-light {
+    background-color: transparent;
+    color: #d6cfcf;
+    border: 2px solid #ece9e8;
+}
+
+.btn-light:hover {
+    background-color: #444842;
+    color: #fff;
+}
