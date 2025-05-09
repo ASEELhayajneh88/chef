@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>كل الوصفات</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container">
+    <h1 class="mt-5">قائمة الوصفات للتعديل</h1>
+
+    {% for recipe in recipes %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ recipe[1] }}</h5> <!-- الاسم -->
+                <p><strong>المكونات:</strong> {{ recipe[2] }}</p>
+                <p><strong>طريقة التحضير:</strong> {{ recipe[3] }}</p>
+                
+                {% if recipe[4] %}
+                    <p><strong>الصورة:</strong></p>
+                    <img src="{{ url_for('static', filename='uploads/' + recipe[4]) }}" alt="صورة الوصفة" style="max-width: 300px;">
+                {% else %}
+                    <p><strong>الصورة:</strong> لا توجد صورة</p>
+                {% endif %}
+
+                <p><strong>نسبة الثقة:</strong> {{ "%.2f"|format(recipe[5]) }}</p>
+
+                <!-- زر التعديل يوجه إلى صفحة تعديل الوصفة -->
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe[0]) }}" class="btn btn-primary">تعديل</a>
+
+                <!-- زر الحذف داخل فورم لأنه يتطلب POST -->
+                <form action="{{ url_for('delete_recipe', recipe_id=recipe[0]) }}" method="POST"  onsubmit="return confirm('هل أنت متأكد من حذف هذه الوصفة؟');">
+                    <button type="submit" class="btn btn-danger mt-3">حذف</button>
+                </form>
+            </div>
+        </div>
+    {% endfor %}
+
+    <a href="{{ url_for('logout') }}" class="btn btn-danger mb-5">تسجيل الخروج</a>
+</body>
+</html>

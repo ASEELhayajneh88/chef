@@ -45,7 +45,11 @@
                         <a class="nav-link" href="/recipes">الوصفات</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/add_recipe">إضافة وصفة</a>
+                         <a class="nav-link"  href="{{ url_for('login', next=url_for('admin_dashboard', action='add')) }}">إضافة وصفة</a>
+                    </li>
+                    <li class="nav-item">
+                      
+                         <a  class="nav-link" href="{{ url_for('login', next=url_for('admin_dashboard', action='edit_all')) }}">تعديل الوصفات</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/search">بحث</a>

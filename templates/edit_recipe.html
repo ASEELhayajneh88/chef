@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تعديل وصفة</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='update_recipe.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container">
+    <h1 class="mt-5">تعديل وصفة</h1>
+    <form method="POST" enctype="multipart/form-data" class="mt-3">
+        <input type="text" name="title" value="{{ recipe[1] }}" placeholder="اسم الوصفة" class="form-control mb-3" required>
+        
+        <textarea name="ingredients" placeholder="المكونات" class="form-control mb-3" required>{{ recipe[2] }}</textarea>
+        
+        <textarea name="instructions" placeholder="طريقة التحضير" class="form-control mb-3" required>{{ recipe[3] }}</textarea>
+
+        <label class="mb-2">تغيير الصورة (اختياري):</label>
+        <input type="file" name="image" class="form-control mb-3">
+
+        {% if recipe[4] %}
+            <p>الصورة الحالية: <strong>{{ recipe[4] }}</strong></p>
+            <img src="{{ url_for('static', filename='uploads/' + recipe[4]) }}" alt="صورة الوصفة" style="max-width: 300px;" class="mb-3">
+        {% else %}
+            <p>لا توجد صورة حالياً</p>
+        {% endif %}
+
+        <button type="submit" class="btn btn-primary">تحديث الوصفة</button>
+    </form>
+
+    <a href="{{ url_for('logout') }}" class="logout-link">تسجيل الخروج</a>
+</body>
+</html>
+
